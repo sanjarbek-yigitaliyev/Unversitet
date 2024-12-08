@@ -28,7 +28,7 @@ class Ustoz(models.Model):
     yosh = models.PositiveSmallIntegerField(validators=[MinValueValidator(25),MaxValueValidator(60)],default=25)
     daraja = models.CharField(max_length=50,choices=(('Bakalavr','Bakalavr'),('Magistr','Magistr'),('PHD','PHD')))
     fan = models.ForeignKey(Fan,on_delete=models.SET_NULL,null=True)
-
+    oilali=models.BooleanField(default=False)
     def __str__(self):
         return self.ism
 
